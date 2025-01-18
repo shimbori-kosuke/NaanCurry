@@ -44,7 +44,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     account_id = models.CharField(
         verbose_name=_("account_id"),
         unique=True,
-        max_length=10
+        max_length=128
+        help_text=_('must e unique. 128 charactors or fewer')
     )
     email = models.EmailField(
         verbose_name=_("email"),
