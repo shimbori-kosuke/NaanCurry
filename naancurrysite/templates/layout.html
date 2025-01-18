@@ -1,17 +1,14 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>My test page</title>
-  </head>
-  <body>
-    <div id="wrap">
-        <section class="container-lg pb-5">
-            <div class="contents">
-                {% block content %}
-                {% endblock %}
-            </div>
-        </section>
+{% extends 'bootstrap.html' %}
+
+{% load django_bootstrap5 %}
+
+{% block bootstrap5_content %}
+    <div class="container">
+        <h1>{% block title %}(no title){% endblock %}</h1>
+
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+        {% block content %}(no content){% endblock %}
     </div>
-  </body>
-</html>
+
+{% endblock %}
