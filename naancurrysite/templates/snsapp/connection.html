@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% load django_bootstrap5 %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<div class="container mt-3">
+    {% for item in object_list %}
+    <p>タイトル：<a href="#">{{item.author}}</a></p>
+    {% endfor %}
+</div>
+
+{% endblock %}

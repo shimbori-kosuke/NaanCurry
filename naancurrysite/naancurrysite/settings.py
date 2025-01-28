@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'indexpage.apps.IndexpageConfig',
     'accounts.apps.AccountsConfig',
+    'reviews.apps.ReviewsConfig',
+    'snsapp.apps.SnsappConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -76,6 +78,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'naancurrysite.wsgi.application'
 
 AUTH_USER_MODEL = 'accounts.User'
+LOGIN_REDIRECT_URL = '/'
 
 
 # Database
@@ -124,6 +127,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

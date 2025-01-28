@@ -44,23 +44,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         verbose_name=_("account_id"),
         unique=True,
         max_length=128,
-        help_text=_('must unique. 128 charactors or fewer'),
-    )
-    email = models.EmailField(
-        verbose_name=_("email"),
-        unique=True
-    )
-    first_name = models.CharField(
-        verbose_name=_("first_name"),
-        max_length=150,
-        null=True,
-        blank=False
-    )
-    last_name = models.CharField(
-        verbose_name=_("last_name"),
-        max_length=150,
-        null=True,
-        blank=False
+        help_text=_('must be unique. 128 charactors or fewer'),
     )
     is_superuser = models.BooleanField(
         verbose_name=_("is_superuer"),

@@ -14,7 +14,7 @@ class SignupView(CreateView):
     """ ユーザー登録用ビュー """
     form_class = SignUpForm # 作成した登録用フォームを設定
     template_name = "accounts/signup.html" 
-    success_url = reverse_lazy("accounts:index") # ユーザー作成後のリダイレクト先ページ
+    success_url = reverse_lazy("index:index") # ユーザー作成後のリダイレクト先ページ
 
     def form_valid(self, form):
         # ユーザー作成後にそのままログイン状態にする設定
@@ -27,6 +27,7 @@ class SignupView(CreateView):
 
 class LoginPageView(LoginView):
     template_name = 'accounts/login.html'
+    next_page = 'index:index'
 
 class LogoutPageView(LogoutView):
-    template_name = 'accounts/index.html'
+    next_page = 'index:index'

@@ -5,5 +5,69 @@
 {% block title %}{% endblock %}
 
 {% block content %}
-<h1>Index Page</h1>
+<h1>Welcome to NaanCurry.com!!</h1>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card h-100 mb-3">
+        {% load static %}
+        <div id="carouselExampleIndicatorsreview" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicatorsreview" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicatorsreview" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'home/images/reviews.png' %}" class="card-img-top d-block w-100 img-fluid" alt="reviews">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'home/images/reviews_2.png' %}" class="card-img-top d-block w-100 img-fluid" alt="reviews">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsreview" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsreview" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body position-relative">
+          <h5 class="card-title"><a href='{% url "reviews:index" %}' class="text-dark stretched-link">Currys<b>Reviews</b></a></h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 mb-3">
+        {% load static %}
+        <div id="carouselExampleIndicatorsSNS" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicatorsSNS" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicatorsSNS" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'home/images/SNS.png' %}" class="card-img-top d-block w-100 img-fluid" alt="SNS">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'home/images/SNS_2.png' %}" class="card-img-top d-block w-100 img-fluid" alt="SNS_2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsSNS" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsSNS" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body position-relative">
+          <h5 class="card-title"><a href='{% url "snsapp:index" %}' class="text-dark stretched-link">Currys<b>SNS</b></a></h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+</div>
 {% endblock %}
